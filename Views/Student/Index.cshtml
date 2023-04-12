@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Student Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h1>List of Students</h1>
+    <h1>@ViewBag.info</h1>
+    <div>
+        @foreach (StudentModel book in ViewBag.students)
+        {
+            <table>
+            <tr>
+                <td>
+                    @book.studentName
+                </td>
+                <td>
+                    @book.studentDept
+                </td>
+                <td>
+                    @book.studentId
+                </td>
+            </tr>
+            </table>
+        }
+
+    </div>
+</div>
